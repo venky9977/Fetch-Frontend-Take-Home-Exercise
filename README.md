@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# Paw-fect Match Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React single-page application that helps dog lovers browse and “paw-ty” adoptable shelter dogs. Includes both a traditional search interface and a location-based map view, with fun dog-themed animations and responsive design powered by **Chakra UI**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### Landing & Login
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Animated paw icon and quirky messaging on the landing page  
+- Dog-themed background animation on the login page  
+- Authentication via Fetch’s `/auth/login` endpoint with HttpOnly cookies  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Search Page
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Filter by **breed**, **age range** (min/max)  
+- Sort by **breed** or **name**, ascending/descending  
+- Pagination: 12 cards per page, mobile adapts to 2 columns  
+- Favorites: click heart icon to add/remove; clear favorites button  
+- Match Generation: send selected IDs to `/dogs/match`, show result in a modal with heart-fireworks animation  
+- Responsive Layout: mobile-first stacks header, filters, then grid  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Location Search Page
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Asks for geolocation once, shows a loading animation until permission/result  
+- Interactive Google Map + List view side-by-side (desktop) or stacked (mobile)  
+- Queries `/locations/search` with a geo-bounding box, then `/dogs/search` for nearby pups  
+- Same favorites & match flow as the main search page  
+- Back button to return to the traditional search  
+
+### Reusable Components
+
+- `<Map>`: custom dog markers with picture & breed, hover/scale effects  
+- `<List>`: scrollable details list with highlighting on map click  
+- `<HeartFireworks>` & `<DogPawLoading>`: fun canvas animations for match and loading  
+
+---
+
+## 🛠 Tech Stack
+- **React** + **TypeScript**  
+- **Chakra UI** for component styling and responsive design  
+- **React Router v6** for client-side routing  
+- **Axios** for HTTP requests with `withCredentials`  
+- **Google Maps React** for map integration  
+- **React Icons** for playful iconography  
+- Custom animations built on the **Canvas API**  
+
+---
+
+## 🎉 Acknowledgements
+- Thanks to **Fetch** for providing the Take-Home API service  
