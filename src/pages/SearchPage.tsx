@@ -28,7 +28,6 @@ import {
   NumberDecrementStepper,
 } from '@chakra-ui/react'
 import { FaSortAlphaDown, FaSortAlphaUp } from 'react-icons/fa'
-import { TbMapSearch } from 'react-icons/tb'
 import {
   fetchBreeds,
   searchDogs,
