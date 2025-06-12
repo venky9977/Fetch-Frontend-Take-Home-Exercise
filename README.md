@@ -44,7 +44,6 @@ A React single-page application that helps dog lovers browse and “paw-ty” ad
 - **Axios** for HTTP requests with `withCredentials`  
 - **Google Maps React** for map integration  
 - **React Icons** for playful iconography  
-- Custom animations built on the **Canvas API**  
 
 ---
 
