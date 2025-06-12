@@ -326,7 +326,7 @@ export default function SearchPage() {
         : dogs.length===0
           ? <Text textAlign="center" mt={10}>Sorry, no furry matches found! 🐾</Text>
           : <>
-              <Grid templateColumns={{ base:'repeat(2,1fr)', md:'repeat(4,1fr)' }} gap={6}>
+              <Grid templateColumns={{ base:'repeat(1,1fr)', md:'repeat(4,1fr)' }} gap={6}>
                 {dogs.map(dog=>{
                   const loc = locations[dog.zip_code]
                   return (
