@@ -1,5 +1,4 @@
 // src/components/DogPawLoading.tsx
-import React from 'react'
 import { Box, Text } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react'
 

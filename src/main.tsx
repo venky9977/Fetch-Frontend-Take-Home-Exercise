@@ -1,5 +1,4 @@
 // src/main.tsx
-import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { ChakraProvider, Box } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom'

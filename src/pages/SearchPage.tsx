@@ -1,5 +1,5 @@
 // src/pages/SearchPage.tsx
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link as RouterLink, useNavigate } from 'react-router-dom'
 import {
   Box,
@@ -217,9 +217,8 @@ export default function SearchPage() {
           w={{ base:'100%', md:'auto' }}
           maxW="xs"
           _hover={{ bg:'brand.600', color:'white' }}
-          rightIcon={<TbMapSearch />}
         >
-          🗺️ Map Your Pup Match!
+          🗺️ CLICK to Map Your Pup Match!
         </Button>
       </Stack>
 

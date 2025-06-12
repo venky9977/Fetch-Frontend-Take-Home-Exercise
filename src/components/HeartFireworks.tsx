@@ -1,5 +1,5 @@
 // src/components/HeartFireworks.tsx
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Box, Icon, usePrefersReducedMotion } from '@chakra-ui/react'
 import { FaHeart } from 'react-icons/fa'
 import { keyframes } from '@emotion/react'
