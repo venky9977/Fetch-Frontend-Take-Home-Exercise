@@ -1,6 +1,6 @@
 # Paw-fect Match Finder
 
-A React single-page application that helps dog lovers browse and “paw-ty” adoptable shelter dogs. Includes both a traditional search interface and a location-based map view, with fun dog-themed animations and responsive design powered by **Chakra UI**.
+A React application that helps dog lovers browse and “paw-ty” adoptable shelter dogs. Includes both a traditional search interface and a location-based map view, with fun dog-themed animations and responsive design powered by **Chakra UI**.
 
 ---
 
